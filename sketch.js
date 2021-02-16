@@ -13,7 +13,11 @@ let flowfield;
 
 function setup() {
   frameRate(fr);
-  createCanvas(1920, 1080);
+  let cnv = createCanvas(800, 800);
+  let x = (windowWidth - width) / 2;
+  let y = (windowHeight - height) / 2;
+  cnv.position(x, y);
+  
   colorMode(HSB, 255);
   cols = floor(width / scl);
   rows = floor(height / scl);
